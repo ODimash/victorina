@@ -1,0 +1,143 @@
+/* Основные стили для всего сайта */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Заголовок и общие отступы */
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Таблица с категориями */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+td {
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border: 2px solid #ddd;
+}
+
+td:hover {
+  background-color: #f1f1f1;
+}
+
+/* Отображённые задачи */
+td:has(✔️) {
+  background-color: #ddd;
+  cursor: default;
+}
+
+/* Модальное окно */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+.modal p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.modal img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Стиль кнопки для неправильного ответа */
+button.incorrect {
+  background-color: #f44336;
+}
+
+button.incorrect:hover {
+  background-color: #e53935;
+}
+
+/* Стили завершения игры */
+.modal p.winner {
+  font-weight: bold;
+  font-size: 24px;
+  color: #4CAF50;
+}
+
+/* Центрирование контента */
+.container {
+  text-align: center;
+  margin: 20px;
+}
+
+.scoreboard {
+  margin: 20px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.player {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.current-turn {
+  color: #ff9800;
+  font-weight: bold;
+}
