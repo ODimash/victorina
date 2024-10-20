@@ -1,0 +1,71 @@
+.intro-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    gap: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .dice {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: transform 2s ease-in-out;
+  }
+
+  .dice::after {
+    content: '🎲';
+    font-size: 3rem;
+  }
+
+  .rolling {
+    animation: roll 1s infinite; /* Бесконечная анимация вращения */
+  }
+
+  @keyframes roll {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .start-game-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+    margin: 100;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Эффект при наведении */
+  .start-game-button:hover {
+    background-color: green;
+    transform: scale(1.1);
+  }
+
+  /* Эффект при нажатии */
+  .start-game-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Блокировка кнопки (во время анимации) */
+  .start-game-button:disabled {
+    background-color: #4CAF50;
+    cursor: not-allowed;
+  }

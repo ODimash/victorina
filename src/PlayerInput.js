@@ -49,7 +49,7 @@ function PlayerInput({ startGame }) {
       {/* Список добавленных игроков */}
       {players.length > 0 && (
         <div className="player-list">
-          <h2>Ойыншылард тізімі:</h2>
+          <h2>Ойыншылар тізімі:</h2>
           <ul>
             {players.map((player, index) => (
               <li key={index}>{player.name}</li>

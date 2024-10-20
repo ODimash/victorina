@@ -21,7 +21,7 @@ function GameBoard({ players, setPlayers, nextPlayer, currentPlayer }) {
       0
     );
     const openedCount = Object.keys(openedTasks).length;
-    return totalTasks === openedCount; // Игра завершена, если все задания выполнены
+    return totalTasks === openedCount; // Ойын аяқталды!, если все задания выполнены
   };
 
 	const handleTaskClick = (categoryIndex, taskIndex) => {
@@ -121,9 +121,9 @@ function GameBoard({ players, setPlayers, nextPlayer, currentPlayer }) {
 
       {isGameOver && (
         <div className="modal">
-          <h2>Игра завершена!</h2>
-          <p className="winner">Победитель: {getWinner()}</p>
-          <button onClick={() => window.location.reload()}>Начать заново</button>
+          <h2>Ойын аяқталды!!</h2>
+          <p className="winner">Жеңімпаз: {getWinner()}</p>
+          <button onClick={() => window.location.reload()}>Жаңа ойын</button>
         </div>
       )}
     </div>
